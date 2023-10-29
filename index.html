@@ -1,6 +1,12 @@
 <html>
 <head>
 <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   .botao {
     position: absolute;
     top: 50%;
@@ -8,10 +14,13 @@
     transform: translate(-50%, -50%);
     width: 100px;
     height: 40px;
-    background-color: blue;
+    background-color: black;
     color: white;
     font-size: 20px;
     border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
   }
 
   .janela {
@@ -22,8 +31,8 @@
     transform: translate(-50%, -50%);
     width: 400px;
     height: 400px;
-    background-color: green;
-    color: white;
+    background-color: white;
+    color: black;
     font-size: 30px;
     text-align: center;
     line-height: 400px;
