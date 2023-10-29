@@ -1,29 +1,22 @@
+<!DOCTYPE html>
 <html>
 <head>
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .botao {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 40px;
-    background-color: black;
-    color: white;
+  /* Estilo do botão */
+  #botao {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
     font-size: 20px;
-    border-radius: 10px;
+    background-color: blue;
+    color: white;
     border: none;
-    outline: none;
     cursor: pointer;
   }
 
-  .janela {
+  /* Estilo da janela */
+  #janela {
     display: none;
     position: fixed;
     top: 50%;
@@ -31,23 +24,40 @@
     transform: translate(-50%, -50%);
     width: 400px;
     height: 400px;
-    background-color: white;
-    color: black;
-    font-size: 30px;
+    background-color: gray;
+    border: 2px solid black;
+  }
+
+  /* Estilo do texto */
+  #texto {
+    display: block;
+    margin: 0 auto;
     text-align: center;
-    line-height: 400px;
-    border-radius: 8px;
+    font-size: 30px;
+    color: black;
+  }
+
+  /* Estilo do botão de fechar */
+  #fechar {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
   }
 </style>
 </head>
 <body>
-<button class="botao" onclick="mostrarJanela()">Clique me</button>
-<div class="janela">texto</div>
+<button id="botao">Clique aqui</button> <!-- Botão que abre a janela -->
+<div id="janela"> <!-- Janela que contém o texto e o botão de fechar -->
+<p id="texto">Texto</p> <!-- Texto dentro da janela -->
+<button id="fechar">X</button> <!-- Botão que fecha a janela -->
+</div>
 <script>
-  function mostrarJanela() {
-    var janela = document.querySelector(".janela");
-    janela.style.display = "block";
-  }
-</script>
-</body>
-</html>
+// Fun
