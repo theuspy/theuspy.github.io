@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Quadrado com Efeito de Arco-Íris na Sombra</title>
+    <title>Quadrado com Efeito de Sombra e Arco-Íris</title>
     <style>
         body {
             display: flex;
@@ -27,6 +27,21 @@
             position: relative;
             border-radius: 8px;
             background-color: gray;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            /* Adicionando a borda com o efeito de arco-íris */
+            border: 3px solid transparent; 
+            animation: rainbow 2s infinite; 
+        }
+
+        /* Definindo as cores e a transição do arco-íris */
+        @keyframes rainbow {
+          0% {border-color: red;}
+          16.67% {border-color: orange;}
+          33.33% {border-color: yellow;}
+          50% {border-color: green;}
+          66.67% {border-color: blue;}
+          83.33% {border-color: indigo;}
+          100% {border-color: violet;}
         }
 
         #texto {
@@ -50,32 +65,6 @@
         #botao:hover {
             background-color: #0056b3;
         }
-
-        /* Adicionando um pseudo-elemento para criar o efeito de arco-íris na sombra */
-        #quadrado::after {
-          content:"";
-          position:absolute; 
-          top:-5px; left:-5px; right:-5px; bottom:-5px; /* Posicionando o pseudo-elemento atrás do quadrado */
-          border-radius: inherit; /* Copiando o raio da borda do quadrado */
-          filter: blur(10px); /* Aplicando o filtro de desfoque */
-          z-index:-1; /* Colocando o pseudo-elemento atrás do quadrado */
-          animation: rainbow 1s infinite; /* Aplicando a animação de arco-íris */
-          border-color: transparent; /* Tornando a borda transparente */
-          border-style:solid; 
-          border-width:inherit; 
-          box-shadow: inherit; /* Herdando a sombra do quadrado */
-        }
-
-        /* Definindo as cores e a transição do arco-íris */
-        @keyframes rainbow {
-          0% {box-shadow-color: red;}
-          16.67% {box-shadow-color: orange;}
-          33.33% {box-shadow-color: yellow;}
-          50% {box-shadow-color: green;}
-          66.67% {box-shadow-color: blue;}
-          83.33% {box-shadow-color: indigo;}
-          100% {box-shadow-color: violet;}
-        }
     </style>
 </head>
 <body>
@@ -83,7 +72,8 @@
         <button id="botao" onclick="criarQuadrado()">Clique Aqui</button>
         <div id="quadrado">
             <div id="texto">
-                <p>Olá Mundo</p>
+                <p>Ala curioso seu pau no cu gay KKKKKK
+                LGBTQIAP+</p>
             </div>
         </div>
     </div>
